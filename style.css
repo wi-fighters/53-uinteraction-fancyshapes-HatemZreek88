@@ -3,3 +3,40 @@
   padding: 0;
   box-sizing: border-box;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /*to center with flex */
+}
+.box {
+  background-color: orange;
+  width: 200px;
+  height: 200px;
+  border: 1px solid snow;
+  margin: 30px;
+}
+.divs-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.with-circle::before {
+  content: "";
+  background-color: orange;
+  clip-path: circle(50% at 50% 50%);
+  width: 50px;
+  height: 50px;
+  position: absolute; /* to show before and after for the clip-path!!!!*/
+  transform: translateX(75px) translateY(-20px);
+}
+.with-triangle::after {
+  content: "";
+  background-color: orange;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  width: 100px;
+  height: 50px;
+  position: absolute; /* to show before and after for the clip-path!!!!*/
+  transform: translateX(50px) translateY(-20px);
+}
